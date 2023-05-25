@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct ItemStack : IEquatable<ItemStack>
+public class ItemStack
 {
 
     private ItemSO item;
@@ -19,11 +19,6 @@ public struct ItemStack : IEquatable<ItemStack>
     {
         this.item = item;
         amount = 0;
-    }
-
-    public bool Equals(ItemStack other)
-    {
-        return item == other.item && amount == other.amount;
     }
 
     public ItemSO GetItem()
