@@ -52,6 +52,7 @@ public class InventoryUI : MonoBehaviour
             inventoryItemUITransform.Find("ItemImage").GetComponent<RectTransform>().localPosition = item.GetItem().uiOffset;
             inventoryItemUITransform.Find("ItemImage").GetComponent<RectTransform>().sizeDelta = new Vector2(item.GetItem().uiWidth, item.GetItem().uiHeight);
             inventoryItemUITransform.Find("AmountText").GetComponent<TextMeshProUGUI>().text = item.GetAmount().ToString();
+            inventoryItemUITransform.GetComponent<InventoryItem>().SetItem(item.GetItem());
         }
     }
 

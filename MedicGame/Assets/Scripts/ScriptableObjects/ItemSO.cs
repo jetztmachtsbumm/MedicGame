@@ -11,5 +11,6 @@ public class ItemSO : ScriptableObject
     public Vector3 uiOffset;
     public float uiWidth = 100;
     public float uiHeight = 100;
+    public Transform prefab;
 
 }
