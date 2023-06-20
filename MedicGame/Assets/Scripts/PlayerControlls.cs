@@ -9,6 +9,7 @@ public class PlayerControlls : MonoBehaviour
 
     private void Update()
     {
+        //Inventory
         if(Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
         {
             if (InventoryUI.Instance.gameObject.activeInHierarchy)
@@ -19,6 +20,12 @@ public class PlayerControlls : MonoBehaviour
             {
                 InventoryUI.Instance.Show();
             }
+        }
+
+        //Use item
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Player.Instance.GetCurrentUsableItemEquipped()?.Use();
         }
 
         //Test Code

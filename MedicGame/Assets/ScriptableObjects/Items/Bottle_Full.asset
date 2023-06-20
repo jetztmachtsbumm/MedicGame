@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6564db7f5905174f8ffdf6ef9c2b674, type: 3}
-  m_Name: Bottle
+  m_Name: Bottle_Full
   m_EditorClassIdentifier: 
-  itemName: Flasche
-  sprite: {fileID: 21300000, guid: c9919e67a42bb7b4c88c5ae7917f7089, type: 3}
+  itemName: Volle Flasche
+  sprite: {fileID: 21300000, guid: f23da23a3f5dd5f4992e3b2071504fb3, type: 3}
   uiOffset: {x: 0, y: 5, z: 0}
   uiWidth: 85
   uiHeight: 85
+  prefab: {fileID: 1413725640207249497, guid: 7b20cdd94403d3e47b55fa06e50ac1ee, type: 3}

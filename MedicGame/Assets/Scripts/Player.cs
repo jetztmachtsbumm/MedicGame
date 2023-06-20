@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public static Player Instance { get; private set; }
 
     private Transform equippableItemPoint;
+    private UsableItem currentUsableItemEquipped;
 
     public void Awake()
     {
@@ -25,10 +26,21 @@ public class Player : MonoBehaviour
     {
         foreach(Transform child in equippableItemPoint)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
 
-        Instantiate(prefab, equippableItemPoint);
+        Transform equippedItem = Instantiate(prefab, equippableItemPoint);
+        SetCurrentUsableItemEquipped(equippedItem.GetComponent<UsableItem>());
+    }
+
+    public UsableItem GetCurrentUsableItemEquipped()
+    {
+        return currentUsableItemEquipped;
+    }
+
+    public void SetCurrentUsableItemEquipped(UsableItem usableItem)
+    {
+        currentUsableItemEquipped = usableItem;
     }
 
 }
